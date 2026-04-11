@@ -1,12 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=Trispace:wght@100..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=Trispace:wght@100..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 :root {
-  --base-color: #000000;
+  --base-color: #132a2c;
   --text-color: #ffffff;
   --primary-color: #5049af69;
   --secondary-color: #71c6ff;
-  --color-1: #1da4b6;
-  --color-2: #e0e0e0;
-  --color-3: #8b5309;
+  --accent-color: #37cadd;
+  --light-gray: #e0e0e0;
+  --dark-brown: #8b5309;
+  --border-color: #00000069;
+  --border-radius: 2rem;
+  --spacing: 2em;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Trispace', 'Datatype', sans-serif;
+    color: var(--text-color);
+}
+body {
+    padding: 2em 1em;
+    background-color: var(--base-color);
+    line-height: 1.6;
+}
+h1, h2, h3 {
+    font-family: 'DM Sans', 'Datatype', sans-serif;
+    margin-bottom: 0.5em;
 }
