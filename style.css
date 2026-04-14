@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=Trispace:wght@100..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 :root {
-  --base-color: #590016;
+  --base-color: #5a0b1f;
   --text-color: #ffffff;
   --primary-color: #5049af69;
   --secondary-color: #71c6ff;
@@ -21,16 +21,139 @@ html {
     color: var(--text-color);
 }
 body {
-    padding: 2em 1em;
+    padding: 0;
     background-color: var(--base-color);
     line-height: 1.6;
+    margin: 0;
 }
 h1, h2, h3 {
     font-family: 'DM Sans', 'Datatype', sans-serif;
     margin-bottom: 0.5em;
 }
+/* Navbar */
+.navbar h1{
+    font-size: 36px;
+    margin-right: 20px;
+    justify-content: space-between;
+}
+
+
+
+ .navbar {
+    background-color: #879c60;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1rem 0;
+    transition: var(--transition);
+}
+.navbar.scrolled {
+  background: rgba(255, 248, 240, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 0.6rem 0;
+  box-shadow: 0 2px 20px rgba(44, 62, 80, 0.08);
+}
+
+ nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links a {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: var(--transition);
+}
+
+.nav-links a:hover { color: var(--color-secondary); }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  background: var(--color-primary);
+  color: #fff !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.nav-cta:hover {
+  background: var(--color-primary-dark);
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+.nav-toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+  transition: var(--transition);
+  display: block;
+}
+/* Hamburger to X animation */
+.nav-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
 
 a {
     color: var(--text-color);
     text-decoration: none;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1.5rem;
+  overflow: hidden;
 }
