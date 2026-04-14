@@ -29,3 +29,8 @@ h1, h2, h3 {
     font-family: 'DM Sans', 'Datatype', sans-serif;
     margin-bottom: 0.5em;
 }
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
